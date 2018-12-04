@@ -1,0 +1,73 @@
+.indicators-container {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	background-color: #222222;
+}
+
+.indicator {
+	position: relative;
+	display: inline-block;
+	margin-right: 40px;
+}
+
+.indicator__value {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1;
+	transform: translate(-50%, -50%)
+}
+
+svg {
+	display: block;
+}
+
+.svg-box {
+	height: 125px;
+	width: 125px;
+	viewbox: 0 0 115 115;
+}
+
+.circle {
+	cx: 62;
+    cy: 62;
+    r: 56;
+    fill: transparent;
+    stroke-width: 10;
+	fill: transparent;
+	transform-origin: center center;
+	transform: rotate(-90deg);
+	stroke-dasharray: 351.85;
+}
+
+.circle-green {
+    stroke: #3aaa35;
+}
+
+.circle-blue {
+	stroke: #009cf5;
+}
+
+.circle-yellow {
+	stroke: #ffcc00;
+}
+
+.degree-40 {
+	stroke-dashoffset: 211.11;
+}
+
+.degree-50 {
+	stroke-dashoffset: 175.92;
+}
+
+.degree-90 {
+	stroke-dashoffset: 35.18;
+}
+
+//- В документации, Индикаторы - это скорее "Секция", а не "Элементы форм".
+//- Сделайте несколько индикаторов с разным значением, 40, 50, 90%.
+//- Добавьте пример подключения секции в документации.

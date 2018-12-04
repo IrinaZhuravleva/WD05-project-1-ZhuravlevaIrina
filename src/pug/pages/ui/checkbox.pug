@@ -1,0 +1,46 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Чекбокс - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Чекбокс (прописать url для галочки)
+			
+			.section-ui.dark-bg
+				+checkbox('I agree with terms')
+			hr
+			.section-ui.dark-bg
+				+radio('Option 1','Option 2')
+			hr
+			.section-ui.dark-bg
+
+				div.form-group
+					input#file(type="file" name="file" data-multiple-caption="{count} файлов выбрано" multiple).inputfile
+					label.form__label-radio(for="file") #{text1}
+						span Выбрать файл
+					//- input#input-radio2(type="radio" name="radio-group").form__input-radio
+					//- span.form__radio
+					//- label.form__label-radio(for="input-radio2") #{text2}
+
+			pre.
+				+checkbox('I agree with terms')
+				+radio('Option 1','Option 2')
+			.title mixins/_checkbox.pug
+			pre.
+				mixin checkbox(text)
+					div.form-group
+						input#input-checkbox(type="checkbox").form__input-checkbox
+						span.form__checkbox
+						label.form__label-checkbox(for="input-checkbox") #{text}
+
+				mixin radio(text1,text2)
+					div.form-group
+						input#input-radio1(type="radio" name="radio-group").form__input-radio
+						span.form__radio
+						label.form__label-radio(for="input-radio1") #{text1}
+						input#input-radio2(type="radio" name="radio-group").form__input-radio
+						span.form__radio
+						label.form__label-radio(for="input-radio2") #{text2}

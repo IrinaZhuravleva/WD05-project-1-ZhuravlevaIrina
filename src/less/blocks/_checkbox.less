@@ -1,0 +1,67 @@
+.form-group {
+	display: flex;
+	flex-direction: row;
+	align-items: center
+}
+
+.form__checkbox {
+	margin-left: 20px;
+	width: 21px;
+	height: 20px;
+	background-color: #1e6791;
+	border-radius: 2px;
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: center -10px;
+	transition: 0.1s ease-out;
+}
+
+.form__input-checkbox,
+.form__input-radio {
+	display: none;
+}
+
+.form__input-checkbox:checked + .form__checkbox {
+	background-position: center;
+}
+
+.form__label-checkbox,
+.form__label-radio {
+	padding-left: 10px;
+}
+
+.form__radio {
+	margin-left: 20px;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 0.0625rem solid #cccccc;
+	outline: none;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.form__input-radio:checked + .form__radio {
+	background-color: #1e6791;
+	border: 0.375rem solid #ffffff;
+	transition: 0.5s;
+}
+
+.inputfile {
+	width: 0.1em;
+	height: 0.1em;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	display: inline-block;
+	background-color: #b1bfc7;
+	color: #ffffff;
+	font-style: 1rem;
+	border-radius: 4px;
+	padding: 10px 12px;
+}
+
+

@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Аватарки - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Аватарки
+			p Аватар большой 205х205 и малый 48х48
+			.section-ui
+				+avatar('photo-big.jpg')
+				+avatarSmall('photo-big.jpg')
+			pre.
+				+avatar('photo-big.jpg')
+				+avatarSmall('photo-big.jpg')
+			.title mixins/_avatars.pug
+			pre.
+				mixin avatar(avatar)
+				.avatar
+					img(src="../img/avatars/" + avatar)
+
+				mixin avatarSmall(avatar)
+					.avatar.avatar--small
+						img(src="../img/avatars/" + avatar)

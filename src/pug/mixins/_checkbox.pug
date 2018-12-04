@@ -1,0 +1,21 @@
+mixin checkbox(text)
+	div.form-group
+		input#input-checkbox(type="checkbox").form__input-checkbox
+		span.form__checkbox
+		label.form__label-checkbox(for="input-checkbox") #{text}
+
+mixin radio(text1,text2)
+	div.form-group
+		input#input-radio1(type="radio" name="radio-group").form__input-radio
+		span.form__radio
+		label.form__label-radio(for="input-radio1") #{text1}
+		input#input-radio2(type="radio" name="radio-group").form__input-radio
+		span.form__radio
+		label.form__label-radio(for="input-radio2") #{text2}
+
+
+//- пример с прописыванием классов в виде name
+//- mixin icon(name, mode)
+//- 	- mod = mod || '';
+//- 	svg(class="icon icon-" + name + " " + mode)
+//- 		use(xlink:href="img/sprite.svg#" + name)
